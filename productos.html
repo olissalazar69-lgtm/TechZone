@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TechZone | Productos</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+<style> 
+    .product-img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+}
+
+.product-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+     
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            ⚡ Tech<span>Zone</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="productos.html">Productos</a>
+            </li>
+
+            <li>
+                <a href="javascript.html">JavaScript</a>
+            </li>
+
+            <li>
+                <a href="jquery.html">jQuery</a>
+            </li>
+
+            <li>
+                <a href="json.html">JSON</a>
+            </li>
+
+            <li>
+                <a href="hosting.html">
+                    Hosting y Dominios
+                </a>
+            </li>
+
+            <li>
+                <a href="cuestionario.html">
+                    Cuestionario
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p class="tag">PRODUCTOS</p>
+
+        <h1>
+            Nuestros <span>productos</span>
+        </h1>
+
+        <p>
+            Tecnología para estudiar, trabajar,
+            jugar y disfrutar.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card product">
+
+            <div class="product-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFKTZi2wS91z4kTqJbTE66L7YwNVI0oyK4Lt1vAqu-wlloPJ0b2KFDp28&s=10">
+            </div>
+
+            <h3>Laptop Pro</h3>
+
+            <p>
+                Computadora portátil para estudiar
+                y trabajar.
+            </p>
+
+            <h3>$899</h3>
+
+            <button
+                class="btn"
+                onclick="agregarProducto('Laptop Pro')">
+
+                Comprar
+
+            </button>
+
+        </div>
+
+
+        <div class="card product">
+
+            <div class="product-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp8vpdYqZS9fCDIRqoQZRqFB7bd8Ox1XwcuV2CkXz5Ew&s">
+            </div>
+
+            <h3>Smartphone</h3>
+
+            <p>
+                Teléfono inteligente para comunicación
+                y entretenimiento.
+            </p>
+
+            <h3>$499</h3>
+
+            <button
+                class="btn"
+                onclick="agregarProducto('Smartphone')">
+
+                Comprar
+
+            </button>
+
+        </div>
+
+
+        <div class="card product">
+
+            <div class="product-img">
+                <img src="https://buketomnisportpweb.s3.us-east-2.amazonaws.com/seo/cbKy2JQbpQh9rrAulEJESbHrVDh8tG8RZenB69Ou.jpeg">
+            </div>
+
+            <h3>Audífonos</h3>
+
+            <p>
+                Audífonos para música y entretenimiento.
+            </p>
+
+            <h3>$79</h3>
+
+            <button
+                class="btn"
+                onclick="agregarProducto('Audífonos')">
+
+                Comprar
+
+            </button>
+
+        </div>
+
+
+        <div class="card product">
+
+            <div class="product-img">
+                <img src="https://coolboxmx.vtexassets.com/arquivos/ids/158046/KD-809_1.jpg?v=638519894594930000">
+            </div>
+
+            <h3>Teclado Gamer</h3>
+
+            <p>
+                Teclado diseñado para videojuegos.
+            </p>
+
+            <h3>$69</h3>
+
+            <button
+                class="btn"
+                onclick="agregarProducto('Teclado Gamer')">
+
+                Comprar
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>⚡ TechZone</h2>
+
+    <p>© 2026 TechZone</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

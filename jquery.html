@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TechZone | jQuery</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+
+</head>
+
+<body>
+
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            ⚡ Tech<span>Zone</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Inicio</a></li>
+
+            <li><a href="productos.html">
+                Productos
+            </a></li>
+
+            <li><a href="javascript.html">
+                JavaScript
+            </a></li>
+
+            <li><a href="jquery.html">
+                jQuery
+            </a></li>
+
+            <li><a href="json.html">
+                JSON
+            </a></li>
+
+            <li><a href="hosting.html">
+                Hosting y Dominios
+            </a></li>
+
+            <li><a href="cuestionario.html">
+                Cuestionario
+            </a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="section">
+
+
+<div class="section-title">
+
+    <p class="tag">PÁGINA 2</p>
+
+    <h1>
+        ¿Qué es <span>jQuery?</span>
+    </h1>
+
+</div>
+
+
+<div class="info-box">
+
+    <h2>¿Qué es jQuery?</h2>
+
+    <p>
+
+        jQuery es una biblioteca de JavaScript
+        creada para facilitar tareas comunes
+        en el desarrollo de páginas web.
+
+    </p>
+
+</div>
+
+
+<div class="info-box">
+
+    <h2>¿Por qué nació jQuery?</h2>
+
+    <p>
+
+        jQuery nació para simplificar tareas como
+        seleccionar elementos HTML, trabajar con
+        eventos, crear animaciones y manipular
+        el contenido de las páginas.
+
+    </p>
+
+</div>
+
+
+<div class="info-box">
+
+    <h2>Sintaxis básica</h2>
+
+<pre><code>
+
+$("#boton").click(function(){
+
+    alert("Hola desde jQuery");
+
+});
+
+</code></pre>
+
+    <p>
+
+        El símbolo <strong>$</strong> se utiliza
+        normalmente para seleccionar elementos
+        y trabajar con ellos.
+
+    </p>
+
+</div>
+
+
+<div class="info-box">
+
+    <h2>Ventajas y desventajas</h2>
+
+    <h3>Ventajas</h3>
+
+    <ul>
+
+        <li>
+            Sintaxis sencilla.
+        </li>
+
+        <li>
+            Facilita algunos efectos.
+        </li>
+
+        <li>
+            Simplifica algunos eventos.
+        </li>
+
+    </ul>
+
+
+    <h3>Desventajas</h3>
+
+    <ul>
+
+        <li>
+            Necesita una biblioteca externa.
+        </li>
+
+        <li>
+            Muchas tareas actualmente pueden
+            realizarse con JavaScript moderno.
+        </li>
+
+    </ul>
+
+</div>
+
+
+<div class="info-box">
+
+    <h2>Ejemplo interactivo</h2>
+
+    <p>
+        Haz clic en el botón para mostrar
+        una animación utilizando jQuery.
+    </p>
+
+
+    <button
+        id="botonJQ"
+        class="btn">
+
+        Mostrar / Ocultar
+
+    </button>
+
+
+    <div
+        id="mensajeJQ"
+        class="interactive-message">
+
+        ¡Este mensaje utiliza jQuery!
+
+    </div>
+
+</div>
+
+
+<div class="info-box">
+
+    <h2>JavaScript vs jQuery</h2>
+
+    <table>
+
+        <tr>
+
+            <th>JavaScript</th>
+
+            <th>jQuery</th>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                document.getElementById("mensaje")
+            </td>
+
+            <td>
+                $("#mensaje")
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                addEventListener()
+            </td>
+
+            <td>
+                .click()
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+    <h2>⚡ TechZone</h2>
+
+    <p>© 2026 TechZone</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
