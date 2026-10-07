@@ -720,65 +720,11 @@ footer h2 {
 
 }
 
-
 /* =========================
-   RESPONSIVE
+   FORMULARIO DE CONTACTO
 ========================= */
 
-@media (max-width: 1000px) {
-
-    .navbar {
-
-        flex-direction: column;
-
-    }
-
-
-    .hero {
-
-        flex-direction: column;
-
-        text-align: center;
-
-    }
-
-
-    .cards {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .cards {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: 40px;
-
-    }
-
-
-    .hero-image {
-
-        width: 220px;
-
-        height: 220px;
-
-        font-size: 80px;
-    }
-
-    .contacto {
+.contacto {
     padding: 80px 20px;
     background: #f5f5f5;
 }
@@ -798,7 +744,7 @@ footer h2 {
     margin-bottom: 10px;
 }
 
-.contacto p {
+.contacto > .contacto-contenido > p {
     text-align: center;
     color: #666;
     margin-bottom: 30px;
@@ -831,7 +777,7 @@ footer h2 {
 
 .contacto button {
     padding: 14px;
-    background: #d96b27;
+    background: #2563eb;
     color: white;
     border: none;
     border-radius: 8px;
@@ -840,12 +786,34 @@ footer h2 {
 }
 
 .contacto button:hover {
-    background: #b8541d;
+    background: #1d4ed8;
 }
 
 #respuesta {
     margin-top: 15px;
+    text-align: center;
     font-weight: bold;
 }
 
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
     }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        width: 220px;
+        height: 220px;
+        font-size: 80px;
+    }
+
+}
