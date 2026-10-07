@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone | Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            ⚡ Tech<span>Zone</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="jquery.html">jQuery</a></li>
+            <li><a href="json.html">JSON</a></li>
+            <li><a href="hosting.html">Hosting y Dominios</a></li>
+            <li><a href="cuestionario.html">Cuestionario</a></li>
+            <li><a href="./formulario.html">formulario</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<section class="contacto" id="contacto">
+    <div class="contacto-contenido">
+
+        <h2>Contáctanos</h2>
+        <p>Envíanos tu mensaje y nos pondremos en contacto contigo.</p>
+
+        <form id="formularioContacto">
+
+            <label for="nombre">Nombre:</label>
+            <input 
+                type="text" 
+                id="nombre" 
+                name="nombre"
+                placeholder="Escribe tu nombre"
+                required
+            >
+
+            <label for="email">Email:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email"
+                placeholder="Escribe tu correo"
+                required
+            >
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea 
+                id="mensaje" 
+                name="mensaje"
+                placeholder="Escribe tu mensaje"
+                rows="6"
+                required
+            ></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+
+            <p id="respuesta"></p>
+
+        </form>
+
+    </div>
+</section>
+
+
+<!-- ================= DISCORD WEBHOOK ================= -->
+
+<script>
+
+const formulario = document.getElementById("formularioContacto");
+const respuesta = document.getElementById("respuesta");
+
+// AQUÍ PEGAS TU WEBHOOK DE DISCORD
+const webhookURL = "https://discord.com/api/webhooks/1557493652492656752/ls-2y19Dkq-vTIHLxcRq6Jc7LsFwyE1v4s-Bu750EQxbY_D_I1Weg06SE-GFgUBDLCu-";
+
+
+formulario.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    // Obtener los datos del formulario
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+
+    // Información que se enviará a Discord
+    const datos = {
+
+        username: "Formulario de Contacto",
+
+        embeds: [
+            {
+                title: "📩 Nuevo mensaje de contacto",
+
+                color: 14185255,
+
+                fields: [
+
+                    {
+                        name: "👤 Nombre",
+                        value: nombre,
+                        inline: false
+                    },
+
+                    {
+                        name: "📧 Email",
+                        value: email,
+                        inline: false
+                    },
+
+                    {
+                        name: "💬 Mensaje",
+                        value: mensaje,
+                        inline: false
+                    }
+
+                ],
+
+                timestamp: new Date().toISOString()
+            }
+        ]
+    };
+
+
+    // Enviar información a Discord
+    try {
+
+        const envio = await fetch(webhookURL, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(datos)
+
+        });
+
+
+        if (envio.ok) {
+
+            respuesta.textContent = "✅ ¡Mensaje enviado correctamente!";
+            respuesta.style.color = "green";
+
+            // Limpiar formulario
+            formulario.reset();
+
+        } else {
+
+            respuesta.textContent = "❌ No se pudo enviar el mensaje.";
+            respuesta.style.color = "red";
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        respuesta.textContent = "❌ Ocurrió un error al enviar el mensaje.";
+        respuesta.style.color = "red";
+
+    }
+
+});
+
+</script>
