@@ -161,19 +161,23 @@ formulario.addEventListener("submit", async function(event) {
 
         } else {
 
-            respuesta.textContent = "❌ No se pudo enviar el mensaje.";
-            respuesta.style.color = "red";
+    const errorDiscord = await envio.text();
 
-        }
+    console.error("Discord respondió:", errorDiscord);
 
-    } catch (error) {
+    respuesta.textContent = "❌ Discord rechazó el mensaje.";
+    respuesta.style.color = "red";
 
-        console.error(error);
+}
 
-        respuesta.textContent = "❌ Ocurrió un error al enviar el mensaje.";
-        respuesta.style.color = "red";
+   }  catch (error) {
 
-    }
+    console.error("ERROR:", error);
+
+    respuesta.textContent = "❌ Error: " + error.message;
+    respuesta.style.color = "red";
+
+}
 
 });
 
