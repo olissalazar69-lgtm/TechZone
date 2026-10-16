@@ -795,6 +795,183 @@ footer h2 {
     font-weight: bold;
 }
 
+/* BOTÓN DE TEMA */
+.btn-tema {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+padding: 9px 13px;
+background: transparent;
+color: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 8px;
+font-family: Arial, sans-serif;
+font-size: 14px;
+white-space: nowrap;
+cursor: pointer;
+transition: background 0.3s, color 0.3s;
+}
+
+.btn-tema:hover {
+background: #374151;
+color: #ffffff;
+}
+
+/* CAMBIO SUAVE DE COLORES */
+body,
+header,
+.hero,
+.section,
+.card,
+.info-box,
+.quiz,
+.interactive,
+.interactive-message,
+.banner,
+footer,
+.contacto,
+.contacto-contenido {
+transition: background-color 0.3s ease, color 0.3s ease,
+border-color 0.3s ease;
+}
+
+/* MODO OSCURO */
+body.modo-oscuro {
+background-color: #0f172a;
+color: #f1f5f9;
+}
+
+body.modo-oscuro header {
+background-color: #111827;
+}
+
+body.modo-oscuro .nav-links a,
+body.modo-oscuro .logo {
+color: #f8fafc;
+}
+
+body.modo-oscuro .section,
+body.modo-oscuro .contacto {
+background-color: #0f172a;
+color: #f1f5f9;
+}
+
+body.modo-oscuro .section-title p:last-child {
+color: #cbd5e1;
+}
+
+body.modo-oscuro .card,
+body.modo-oscuro .info-box,
+body.modo-oscuro .quiz,
+body.modo-oscuro .contacto-contenido {
+background-color: #1e293b;
+color: #f1f5f9;
+border-color: #334155;
+}
+
+body.modo-oscuro .card h3,
+body.modo-oscuro .info-box h3,
+body.modo-oscuro .info-box p,
+body.modo-oscuro .card p,
+body.modo-oscuro .contacto-contenido p {
+color: #e2e8f0;
+}
+
+body.modo-oscuro .info-box h2 {
+color: #60a5fa;
+}
+
+body.modo-oscuro .interactive,
+body.modo-oscuro .interactive-message {
+background-color: #1e293b;
+color: #c4b5fd;
+}
+
+body.modo-oscuro th {
+background-color: #020617;
+color: #ffffff;
+}
+
+body.modo-oscuro td {
+background-color: #1e293b;
+color: #f1f5f9;
+border-color: #475569;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro textarea,
+body.modo-oscuro select {
+background-color: #1e293b;
+color: #f8fafc;
+border-color: #475569;
+}
+
+body.modo-oscuro input::placeholder,
+body.modo-oscuro textarea::placeholder {
+color: #94a3b8;
+}
+
+body.modo-oscuro .banner {
+background-color: #1e3a8a;
+color: #ffffff;
+}
+
+body.modo-oscuro footer {
+background-color: #020617;
+color: #cbd5e1;
+}
+
+body.modo-oscuro footer h2 {
+color: #ffffff;
+}
+
+/* MODO CLARO */
+body.modo-claro {
+background-color: #f8fafc;
+color: #111827;
+}
+
+body.modo-claro header {
+background-color: #ffffff;
+}
+
+body.modo-claro .nav-links a,
+body.modo-claro .logo {
+color: #111827;
+}
+
+body.modo-claro .section,
+body.modo-claro .contacto {
+background-color: #f8fafc;
+color: #111827;
+}
+
+body.modo-claro .card,
+body.modo-claro .info-box,
+body.modo-claro .quiz,
+body.modo-claro .contacto-contenido {
+background-color: #ffffff;
+color: #111827;
+}
+
+body.modo-claro .card p,
+body.modo-claro .info-box p,
+body.modo-claro .contacto-contenido p {
+color: #374151;
+}
+
+body.modo-claro .btn-tema {
+color: #ffffff;
+border-color: #e5e7eb;
+background-color: transparent;
+}
+
+body.modo-claro .btn-tema:hover {
+background-color: #374151;
+color: #ffffff;
+}
+
 
 /* =========================
    RESPONSIVE
