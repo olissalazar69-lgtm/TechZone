@@ -5,7 +5,7 @@
 **Asignatura:** desarrollo de software 
 **Fecha de entrega:** [Día/mes/año]
 
-**Sitio web en Vercel:** [Pegar enlace de Vercel]  
+**Sitio web en Vercel:** [https://techzone-sandy.vercel.app/]  
 **Repositorio de GitHub:** [Pegar enlace de GitHub]
 
 ---
@@ -350,13 +350,15 @@ Para verificar el despliegue se debe comprobar que:
 
 Captura del formulario de contacto con datos ficticios y la notificación recibida en Discord.
 
+
 ![Anexo 1: Formulario y Discord](assets/discord-webhook.png)
 
 ### Anexo 2. Despliegue exitoso en Vercel
 
 Captura del panel de Vercel que muestre el estado satisfactorio del despliegue y la URL pública.
 
-![Anexo 2: Vercel](assets/vercel-status.png)
+
+![Anexo 2: Vercel](assets/c:\Users\19778269_clases\Pictures\Screenshots\Captura de pantalla 2026-10-16 073919.png)
 
 ### Anexo 3. Diseño responsive y Bootstrap
 
