@@ -11,29 +11,7 @@
     <title>TechZone | Productos</title>
 
     <link rel="stylesheet" href="estilos.css">
-
-<style> 
-    .product-img {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: white;
-    border-radius: 12px;
-}
-
-.product-img img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-     
-</style>
+    <link rel="stylesheet" href="translation.css">
 
 </head>
 
@@ -88,6 +66,9 @@
          <button id="btnTema" class="btn-tema" type="button">
     🌙 Modo oscuro
 </button>
+        <button id="btnIdioma" class="btn-tema translate-button" type="button" aria-label="Cambiar idioma">
+            🌐 English
+        </button>
 
     </nav>
 
@@ -112,111 +93,71 @@
     </div>
 
 
-    <div class="cards">
+    <div class="product-carousel" id="productCarousel" role="region" aria-roledescription="carrusel"
+        aria-label="Productos destacados" tabindex="0">
+        <div class="product-carousel-slides">
+            <article class="card product product-slide active" role="group" aria-roledescription="diapositiva"
+                aria-label="Producto 1 de 4" aria-hidden="false">
+                <div class="product-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFKTZi2wS91z4kTqJbTE66L7YwNVI0oyK4Lt1vAqu-wlloPJ0b2KFDp28&s=10"
+                        alt="Laptop Pro" fetchpriority="high">
+                </div>
+                <h3>Laptop Pro</h3>
+                <p>Computadora portátil para estudiar y trabajar.</p>
+                <h3>$899</h3>
+                <button class="btn" type="button" onclick="agregarProducto('Laptop Pro')">Comprar</button>
+            </article>
 
+            <article class="card product product-slide" role="group" aria-roledescription="diapositiva"
+                aria-label="Producto 2 de 4" aria-hidden="true" inert>
+                <div class="product-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp8vpdYqZS9fCDIRqoQZRqFB7bd8Ox1XwcuV2CkXz5Ew&s"
+                        alt="Smartphone" loading="lazy">
+                </div>
+                <h3>Smartphone</h3>
+                <p>Teléfono inteligente para comunicación y entretenimiento.</p>
+                <h3>$499</h3>
+                <button class="btn" type="button" onclick="agregarProducto('Smartphone')">Comprar</button>
+            </article>
 
-        <div class="card product">
+            <article class="card product product-slide" role="group" aria-roledescription="diapositiva"
+                aria-label="Producto 3 de 4" aria-hidden="true" inert>
+                <div class="product-img">
+                    <img src="https://buketomnisportpweb.s3.us-east-2.amazonaws.com/seo/cbKy2JQbpQh9rrAulEJESbHrVDh8tG8RZenB69Ou.jpeg"
+                        alt="Audífonos" loading="lazy">
+                </div>
+                <h3>Audífonos</h3>
+                <p>Audífonos para música y entretenimiento.</p>
+                <h3>$79</h3>
+                <button class="btn" type="button" onclick="agregarProducto('Audífonos')">Comprar</button>
+            </article>
 
-            <div class="product-img">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFKTZi2wS91z4kTqJbTE66L7YwNVI0oyK4Lt1vAqu-wlloPJ0b2KFDp28&s=10">
-            </div>
-
-            <h3>Laptop Pro</h3>
-
-            <p>
-                Computadora portátil para estudiar
-                y trabajar.
-            </p>
-
-            <h3>$899</h3>
-
-            <button
-                class="btn"
-                onclick="agregarProducto('Laptop Pro')">
-
-                Comprar
-
-            </button>
-
+            <article class="card product product-slide" role="group" aria-roledescription="diapositiva"
+                aria-label="Producto 4 de 4" aria-hidden="true" inert>
+                <div class="product-img">
+                    <img src="https://coolboxmx.vtexassets.com/arquivos/ids/158046/KD-809_1.jpg?v=638519894594930000"
+                        alt="Teclado Gamer" loading="lazy">
+                </div>
+                <h3>Teclado Gamer</h3>
+                <p>Teclado diseñado para videojuegos.</p>
+                <h3>$69</h3>
+                <button class="btn" type="button" onclick="agregarProducto('Teclado Gamer')">Comprar</button>
+            </article>
         </div>
 
-
-        <div class="card product">
-
-            <div class="product-img">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp8vpdYqZS9fCDIRqoQZRqFB7bd8Ox1XwcuV2CkXz5Ew&s">
+        <div class="product-carousel-controls">
+            <button class="product-carousel-button" type="button" data-carousel-direction="-1"
+                aria-label="Producto anterior" title="Producto anterior">‹</button>
+            <div class="product-carousel-indicators" aria-label="Seleccionar producto">
+                <button type="button" class="active" data-carousel-slide="0" aria-label="Mostrar Laptop Pro"
+                    aria-current="true"></button>
+                <button type="button" data-carousel-slide="1" aria-label="Mostrar Smartphone"></button>
+                <button type="button" data-carousel-slide="2" aria-label="Mostrar Audífonos"></button>
+                <button type="button" data-carousel-slide="3" aria-label="Mostrar Teclado Gamer"></button>
             </div>
-
-            <h3>Smartphone</h3>
-
-            <p>
-                Teléfono inteligente para comunicación
-                y entretenimiento.
-            </p>
-
-            <h3>$499</h3>
-
-            <button
-                class="btn"
-                onclick="agregarProducto('Smartphone')">
-
-                Comprar
-
-            </button>
-
+            <button class="product-carousel-button" type="button" data-carousel-direction="1"
+                aria-label="Siguiente producto" title="Siguiente producto">›</button>
         </div>
-
-
-        <div class="card product">
-
-            <div class="product-img">
-                <img src="https://buketomnisportpweb.s3.us-east-2.amazonaws.com/seo/cbKy2JQbpQh9rrAulEJESbHrVDh8tG8RZenB69Ou.jpeg">
-            </div>
-
-            <h3>Audífonos</h3>
-
-            <p>
-                Audífonos para música y entretenimiento.
-            </p>
-
-            <h3>$79</h3>
-
-            <button
-                class="btn"
-                onclick="agregarProducto('Audífonos')">
-
-                Comprar
-
-            </button>
-
-        </div>
-
-
-        <div class="card product">
-
-            <div class="product-img">
-                <img src="https://coolboxmx.vtexassets.com/arquivos/ids/158046/KD-809_1.jpg?v=638519894594930000">
-            </div>
-
-            <h3>Teclado Gamer</h3>
-
-            <p>
-                Teclado diseñado para videojuegos.
-            </p>
-
-            <h3>$69</h3>
-
-            <button
-                class="btn"
-                onclick="agregarProducto('Teclado Gamer')">
-
-                Comprar
-
-            </button>
-
-        </div>
-
-
     </div>
 
 </section>
@@ -230,8 +171,7 @@
 
 </footer>
 
-<!-- Código para el modo oscuro y claro -->
-<script src="tema.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

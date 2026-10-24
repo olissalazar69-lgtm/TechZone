@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechZone | Inicio</title>
+    <title>TechZone | Formulario</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="translation.css">
 </head>
 
 <body>
@@ -30,6 +31,9 @@
 
            <button id="btnTema" class="btn-tema" type="button">
                 🌙 Modo oscuro
+            </button>
+           <button id="btnIdioma" class="btn-tema translate-button" type="button" aria-label="Cambiar idioma">
+                🌐 English
             </button>
 
     </nav>
@@ -158,7 +162,10 @@ formulario.addEventListener("submit", async function(event) {
 
         if (envio.ok) {
 
-            respuesta.textContent = "✅ ¡Mensaje enviado correctamente!";
+            respuesta.textContent = window.techzoneTexto(
+                "✅ ¡Mensaje enviado correctamente!",
+                "✅ Message sent successfully!"
+            );
             respuesta.style.color = "green";
 
             // Limpiar formulario
@@ -170,7 +177,10 @@ formulario.addEventListener("submit", async function(event) {
 
     console.error("Discord respondió:", errorDiscord);
 
-    respuesta.textContent = "❌ Discord rechazó el mensaje.";
+    respuesta.textContent = window.techzoneTexto(
+        "❌ Discord rechazó el mensaje.",
+        "❌ Discord rejected the message."
+    );
     respuesta.style.color = "red";
 
 }
@@ -179,7 +189,7 @@ formulario.addEventListener("submit", async function(event) {
 
     console.error("ERROR:", error);
 
-    respuesta.textContent = "❌ Error: " + error.message;
+    respuesta.textContent = window.techzoneTexto("❌ Error: ", "❌ Error: ") + error.message;
     respuesta.style.color = "red";
 
 }
@@ -187,5 +197,6 @@ formulario.addEventListener("submit", async function(event) {
 });
 
 </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+.translate-button {
+    padding: 5px 8px;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    font: 13px/1.2 Arial, sans-serif;
+    margin-left: .4rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.translate-button:hover:not(:disabled) {
+    background: #374151;
+}
+
+.translate-button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+.translate-button:disabled {
+    opacity: .8;
+}
+
+#google_translate_element {
+    position: absolute;
+    left: -10000px;
+    top: 0;
+    width: 200px;
+    height: 40px;
+    white-space: nowrap;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
